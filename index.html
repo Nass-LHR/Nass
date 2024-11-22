@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nass-LHR</title>
+    
+    <!-- Liens pour la police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1c1c1c;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-            background-size: cover;
-            color: #ffffff;
+            font-family: 'Edu AU VIC WA NT Pre', Arial, sans-serif; /* Application de la nouvelle police */
+            background-color: #f5f5dc; /* Fond beige */
+            background-image: none; /* Suppression de l'image de fond */
+            color: #333333;
             margin: 0;
             padding: 0;
             text-align: center;
@@ -43,7 +48,170 @@
         p {
             font-size: 1.2em;
             margin-bottom: 40px;
+            color: #333333;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        a {
+            color: #ff00ff; /* Couleur rose fuchsia */
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+        }
+        a:hover {
+            transform: scale(1.1);
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+        }
+        a img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #333333;
+            color: #ccc;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        /* Styles pour le menu latéral */
+        .menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #333333;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 10;
+        }
+        .menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #ff00ff; /* Couleur rose fuchsia */
+            display: block;
+            transition: 0.3s;
+        }
+        .menu a:hover {
             color: #ffffff;
+        }
+        .menu-btn {
+            font-size: 30px;
+            color: #ff00ff; /* Couleur rose fuchsia */
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu.open {
+            left: 0;
+        }
+        .close-btn {
+            font-size: 36px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #ff00ff; /* Couleur rose fuchsia */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nass_LHR - Les INFORMABean's !!</h1>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <!-- Menu latéral -->
+    <div id="menu" class="menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
+        <a href="https://www.tiktok.com/@nass.lhr" target="_blank">TikTok</a>
+        <a href="https://discord.gg/ANWxYPUanN" target="_blank">Discord</a>
+        <a href="classes.html">Mes Classes</a>
+    </div>
+
+    <section>
+        <h2>Bienvenue sur mon site !</h2>
+        <p>
+            Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay et des stratégies. Parfois, c’est du pur fun, comme dans mes vidéos où, malgré un chargeur vidé sur l’ennemi, je finis éliminée en deux balles. Vous voyez le genre !
+        </p>
+        <p>
+            Sur Twitch, je streame mes parties en direct et interagis avec vous en temps réel. Vous pouvez discuter avec moi pendant que je joue, et ensemble on partage des moments de rage ou de victoire. Rejoignez-moi pour des sessions de jeu, des discussions et des échanges entre passionnés !
+        </p>
+    </section>
+
+    <footer>
+        © 2024 Nass_LHR | Tous droits réservés
+    </footer>
+
+    <script>
+        // Fonction pour ouvrir/fermer le menu
+        function toggleMenu() {
+          <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nass-LHR</title>
+    
+    <!-- Liens pour la police -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Edu AU VIC WA NT Pre', Arial, sans-serif; /* Application de la nouvelle police */
+            background-color: #f5f5dc; /* Fond beige */
+            background-image: none; /* Suppression de l'image de fond */
+            color: #333333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #000000;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        header h1 {
+            color: #ff00ff; /* Couleur rose fuchsia */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center; /* Centrage du titre */
+        }
+        section {
+            margin: 50px auto;
+            max-width: 900px;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff00ff; /* Couleur rose fuchsia */
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            color: #333333;
         }
         .links {
             display: flex;
@@ -157,6 +325,14 @@
         // Fonction pour ouvrir/fermer le menu
         function toggleMenu() {
             var menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+            var button = document.querySelector(".menu-btn");
+            button.innerHTML = (menu.classList.contains("open")) ? "×" : "☰";  // Changer de bouton entre hamburger et croix
+        }
+    </script>
+</body>
+</html>
+  var menu = document.getElementById("menu");
             menu.classList.toggle("open");
             var button = document.querySelector(".menu-btn");
             button.innerHTML = (menu.classList.contains("open")) ? "×" : "☰";  // Changer de bouton entre hamburger et croix
