@@ -3,26 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nass-LHR</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
+    <title>Nass_LHR</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
         body {
-            font-family: 'Edu AU VIC WA NT Pre', sans-serif;
+            font-family: 'Arial', sans-serif;
             background-color: #1c1c1c;
             background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
             background-size: cover;
             color: #ffffff;
+            margin: 0;
+            padding: 0;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -34,15 +24,15 @@
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             position: relative;
-            z-index: 10;
         }
         header h1 {
-            color: #ff00ff;
+            color: #ff00ff; /* Couleur rose fuchsia */
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-align: center;
+            text-align: left; /* Titre aligné à gauche */
             font-size: 2em;
-            margin-right: 50px;
+            margin-left: 20px; /* Décalage à gauche */
+            margin-right: 100px; /* Décalage à droite */
         }
         section {
             margin: 50px auto;
@@ -51,7 +41,7 @@
         h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #ff00ff;
+            color: #ff00ff; /* Couleur rose fuchsia */
             animation: fadeIn 1.5s ease-in-out;
         }
         p {
@@ -66,7 +56,7 @@
             flex-wrap: wrap;
         }
         a {
-            color: #ff00ff;
+            color: #ff00ff; /* Couleur rose fuchsia */
             text-decoration: none;
             font-size: 1.5em;
             transition: transform 0.3s ease, text-shadow 0.3s ease;
@@ -93,6 +83,7 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
+        /* Styles pour le menu latéral */
         .menu {
             height: 100%;
             width: 250px;
@@ -108,7 +99,7 @@
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
-            color: #ff00ff;
+            color: #ff00ff; /* Couleur rose fuchsia */
             display: block;
             transition: 0.3s;
         }
@@ -117,13 +108,13 @@
         }
         .menu-btn {
             font-size: 30px;
-            color: #ff00ff;
+            color: #ff00ff; /* Couleur rose fuchsia */
             background: none;
             border: none;
             cursor: pointer;
             position: absolute;
-            top: 30px;
-            left: 10px;
+            top: 20px;
+            left: 20px;
         }
         .menu.open {
             left: 0;
@@ -133,34 +124,17 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            color: #ff00ff;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5em;
-                margin-right: 50px;
-            }
-            .menu-btn {
-                top: 30px;
-                left: 10px;
-            }
-            .menu {
-                width: 100%;
-                left: -100%;
-            }
-            body {
-                display: block;
-            }
+            color: #ff00ff; /* Couleur rose fuchsia */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Les INFORMABean's !!</h1>
+        <h1>Nass_LHR - Les INFORMABean's !!</h1>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </header>
 
+    <!-- Menu latéral -->
     <div id="menu" class="menu">
         <button class="close-btn" onclick="toggleMenu()">×</button>
         <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
@@ -184,11 +158,12 @@
     </footer>
 
     <script>
+        // Fonction pour ouvrir/fermer le menu
         function toggleMenu() {
             var menu = document.getElementById("menu");
             menu.classList.toggle("open");
             var button = document.querySelector(".menu-btn");
-            button.innerHTML = (menu.classList.contains("open")) ? "×" : "☰";
+            button.innerHTML = (menu.classList.contains("open")) ? "×" : "☰";  // Changer de bouton entre hamburger et croix
         }
     </script>
 </body>
