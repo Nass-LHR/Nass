@@ -8,32 +8,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
         body {
             font-family: 'Edu AU VIC WA NT Pre', sans-serif;
             background-color: #1c1c1c;
             background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
             background-size: cover;
             color: #ffffff;
-            margin: 0;
-            padding: 0;
             text-align: center;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             min-height: 100vh;
-            width: 100%;
         }
         header {
             background-color: #000000;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             position: relative;
+            z-index: 10;
         }
         header h1 {
             color: #ff00ff;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-align: center;
+            font-size: 2em;
+            margin-right: 50px;
         }
         section {
             margin: 50px auto;
@@ -135,11 +144,13 @@
             .menu-btn {
                 top: 30px;
                 left: 10px;
-                position: absolute;
             }
             .menu {
                 width: 100%;
-                left: -100%; /* Assurez-vous que le menu est caché par défaut */
+                left: -100%;
+            }
+            body {
+                display: block;
             }
         }
     </style>
