@@ -7,10 +7,10 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1c1c1c;
-            color: #ffffff;
             margin: 0;
             padding: 0;
+            background-color: #1c1c1c;
+            color: white;
             text-align: center;
         }
         header {
@@ -20,29 +20,21 @@
             background-color: #000000;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
         header h1 {
             color: #f0e68c;
             text-transform: uppercase;
             letter-spacing: 2px;
+            margin: 0;
         }
-        section {
-            margin: 50px auto;
-            max-width: 900px;
-            text-align: left;
-            color: #fff;
-        }
-        h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #f0e68c;
-        }
-        p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
+        .menu-btn {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            z-index: 100;
         }
         .menu {
-            display: none;
             position: fixed;
             top: 0;
             left: -250px;
@@ -52,7 +44,8 @@
             color: white;
             padding: 20px;
             transition: left 0.3s ease-in-out;
-            z-index: 1000;
+            z-index: 50;
+            box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.3);
         }
         .menu.open {
             left: 0;
@@ -64,10 +57,27 @@
             margin: 20px 0;
             display: block;
         }
-        .menu-btn {
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
+        section {
+            margin-top: 80px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #f0e68c;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 15px;
+            text-align: center;
         }
     </style>
 </head>
