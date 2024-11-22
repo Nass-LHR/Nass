@@ -21,17 +21,19 @@
             flex-direction: column;
             justify-content: space-between;
             min-height: 100vh;
+            width: 100%; /* Utilisation de toute la largeur */
         }
         header {
             background-color: #000000;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative; /* Permet d'ajuster la position du menu hamburger */
         }
         header h1 {
             color: #ff00ff; /* Couleur rose fuchsia */
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-align: center; /* Centrage du titre */
+            text-align: center;
         }
         section {
             margin: 50px auto;
@@ -112,8 +114,8 @@
             border: none;
             cursor: pointer;
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 30px;
+            left: 10px; /* Décale un peu le bouton par rapport au titre */
         }
         .menu.open {
             left: 0;
@@ -126,14 +128,20 @@
             color: #ff00ff; /* Couleur rose fuchsia */
         }
 
-        /* Modifications pour le mobile */
+        /* Modifications pour mobile */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.5em; /* Taille plus petite du titre sur mobile */
+                margin-right: 50px; /* Décale légèrement le titre pour plus d'espace */
             }
             .menu-btn {
                 top: 30px; /* Décale le bouton des trois traits */
-                left: 20px; /* Ajuste l'éloignement du titre */
+                left: 10px; /* Ajuste l'éloignement du titre */
+                position: absolute;
+            }
+            .menu {
+                width: 100%; /* Utilisation de toute la largeur */
+                left: 0; /* Le menu apparaît directement à gauche */
             }
         }
     </style>
@@ -156,7 +164,7 @@
     <section>
         <h2>Bienvenue sur mon site !</h2>
         <p>
-            Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay et des stratégies. Parfois, c’est du pur fun, comme dans mes vidéos où, malgré un chargeur vidé sur l’ennemi, je finis éliminée en deux balles. Vous voyez le genre ! 
+            Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay et des stratégies. Parfois, c’est du pur fun, comme dans mes vidéos où, malgré un chargeur vidé sur l’ennemi, je finis éliminée en deux balles. Vous voyez le genre !
         </p>
         <p>
             Sur Twitch, je streame mes parties en direct et interagis avec vous en temps réel. Vous pouvez discuter avec moi pendant que je joue, et ensemble on partage des moments de rage ou de victoire. Rejoignez-moi pour des sessions de jeu, des discussions et des échanges entre passionnés !
