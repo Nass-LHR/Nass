@@ -15,7 +15,7 @@
         }
         header {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background-color: #000000;
             padding: 20px;
@@ -25,7 +25,6 @@
             color: #f0e68c;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-align: center;
         }
         section {
             margin: 50px auto;
@@ -53,6 +52,10 @@
             color: white;
             padding: 20px;
             transition: left 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        .menu.open {
+            left: 0;
         }
         .menu a {
             color: white;
@@ -65,9 +68,6 @@
             font-size: 30px;
             color: white;
             cursor: pointer;
-        }
-        .menu.open {
-            left: 0;
         }
     </style>
 </head>
