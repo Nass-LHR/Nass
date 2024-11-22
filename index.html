@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nass-LHR</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            background-size: cover;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #000000;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        header h1 {
+            color: #f0e68c;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        /* Menu */
+        nav {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        nav.open {
+            display: flex;
+        }
+
+        nav a {
+            color: #f0e68c;
+            text-decoration: none;
+            font-size: 2em;
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Hamburger menu */
+        .hamburger {
+            display: block;
+            background: none;
+            border: none;
+            font-size: 30px;
+            color: #f0e68c;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .hamburger.open::before {
+            content: "×";
+        }
+
+        .hamburger::before {
+            content: "☰";
+        }
+
+        section {
+            margin: 50px auto;
+            max-width: 900px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ccc;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nass_LHR - Les INFORMABean's !!</h1>
+        <button class="hamburger" id="hamburger"></button>
+        <nav id="menu">
+            <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
+            <a href="https://www.tiktok.com/@nass.lhr" target="_blank">TikTok</a>
+            <a href="https://discord.gg/ANWxYPUanN" target="_blank">Discord</a>
+            <a href="classes-warzone.html" class="button-class">Mes Classes</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Bienvenue sur mon site !</h2>
+        <p>Je suis Nass_LHR, aussi connue sous le pseudo Mme Bean sur TikTok...</p>
+    </section>
+
+    <footer>
+        © 2024 Nass_LHR | Tous droits réservés
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const menu = document.getElementById("menu");
+
+        hamburger.addEventListener("click", () => {
+            menu.classList.toggle("open");
+            hamburger.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
