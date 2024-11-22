@@ -42,6 +42,9 @@
         .accessories-list {
             list-style-type: none;
             padding: 0;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s ease-out;
         }
 
         .accessory {
@@ -60,15 +63,6 @@
             display: block;
         }
 
-        .accessories-list {
-            display: none;
-            padding-left: 20px;
-        }
-
-        .accessories-list.show {
-            display: block;
-        }
-
         .plus-sign {
             width: 20px;
             height: 20px;
@@ -78,6 +72,11 @@
             text-align: center;
             line-height: 18px;
             margin-right: 10px;
+        }
+
+        .accessories-list.show {
+            max-height: 200px; /* Ajuster la hauteur maximale selon la longueur de la liste */
+            padding-left: 20px;
         }
     </style>
 </head>
