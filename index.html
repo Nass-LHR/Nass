@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nass_LHR</title>
+    <title>Les INFORMABean's !!</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
@@ -27,14 +27,16 @@
             background-color: #000000;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            position: relative;
         }
         header h1 {
             color: #ff00ff;
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-align: left;
             margin: 0;
-            padding-right: 40px; /* Ajout d'un espace entre le titre et le hamburger */
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
         section {
             margin: 50px auto;
@@ -132,10 +134,8 @@
 </head>
 <body>
     <header>
-        <div style="display: flex; justify-content: space-between; align-items: center; padding-right: 0;">
-            <h1>Les INFORMABean's !!</h1>
-            <button class="menu-btn" onclick="toggleMenu()">☰</button>
-        </div>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <h1>Les INFORMABean's !!</h1>
     </header>
 
     <!-- Menu latéral -->
