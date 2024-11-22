@@ -33,34 +33,18 @@
 
         .weapon-info {
             max-width: 600px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .weapon-info h3, .weapon-info p, .weapon-info h4, .accessories-list li {
+            color: #333;
         }
 
         h2 {
             text-align: center;
-            color: white;
-        }
-
-        .accessories-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .accessory {
-            margin: 10px 0;
-        }
-
-        .accessory-details {
-            display: none;
-            margin-top: 10px;
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: opacity 0.5s ease, max-height 0.5s ease;
-        }
-
-        .accessory-details.open {
-            opacity: 1;
-            max-height: 500px;
         }
 
         button {
@@ -75,34 +59,20 @@
             margin-bottom: 10px;
         }
 
-        button span {
-            margin-right: 10px;
-            font-size: 20px;
-        }
-
         button:hover {
             background-color: #8e44ad;
         }
 
-        .weapon-info h4 {
-            margin-bottom: 10px;
+        .accessory-details {
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
         }
 
-        .weapon-info {
-            max-width: 600px;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .weapon-info p,
-        .weapon-info h3 {
-            color: #333; /* Changer la couleur du texte pour qu'il soit visible */
-        }
-
-        .accessories-list {
-            color: #333; /* Changer la couleur du texte des accessoires */
+        .accessory-details.open {
+            max-height: 500px; /* Ajustez en fonction du contenu */
+            opacity: 1;
         }
     </style>
 </head>
@@ -110,62 +80,52 @@
     <div class="container">
         <h2>Armes et Accessoires</h2>
 
-        <!-- XM4 Weapon -->
+        <!-- XM4 -->
         <div class="weapon">
             <img src="https://i.imgur.com/U4z1Zrl.jpeg" alt="XM4">
             <div class="weapon-info">
                 <h3>XM4 - Fusil d'assaut</h3>
                 <p>Voici l'XM4, une arme polyvalente avec des accessoires pour améliorer sa précision et sa maniabilité.</p>
                 <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('xm4')">+ Dérouler les accessoires</button>
+                <button onclick="toggleAccessories('xm4-accessories')">+ Dérouler les accessoires</button>
                 <ul class="accessories-list" id="xm4-accessories">
                     <div class="accessory-details">
-                        <li class="accessory">Lunette : Willis X3</li>
-                        <li class="accessory">Bouche : Compensateur</li>
-                        <li class="accessory">Canon : Canon renforcé</li>
-                        <li class="accessory">Poignée avant : Verticale</li>
-                        <li class="accessory">Chargeur : Chargeur étendu II</li>
+                        <li>Lunette : Willis X3</li>
+                        <li>Bouche : Compensateur</li>
+                        <li>Canon : Canon renforcé</li>
+                        <li>Poignée avant : Verticale</li>
+                        <li>Chargeur : Chargeur étendu II</li>
                     </div>
                 </ul>
             </div>
         </div>
 
-        <!-- Affliction Étrange Weapon -->
+        <!-- Static-HV -->
         <div class="weapon">
             <img src="https://i.imgur.com/RS0iUDy.jpeg" alt="Static-HV">
             <div class="weapon-info">
                 <h3>Affliction Étrange - Mitraillette</h3>
                 <p>La mitraillette Static-HV offre un style unique et une excellente précision pour les combats rapprochés.</p>
                 <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('static-hv')">+ Dérouler les accessoires</button>
+                <button onclick="toggleAccessories('static-hv-accessories')">+ Dérouler les accessoires</button>
                 <ul class="accessories-list" id="static-hv-accessories">
                     <div class="accessory-details">
-                        <li class="accessory">Lunette : Jak sans verre</li>
-                        <li class="accessory">Bouche : Silencieux de quartier-maître</li>
-                        <li class="accessory">Canon : Canon léger Auger 840</li>
-                        <li class="accessory">Poignée avant : Garde-main X2R Edge BW-4</li>
-                        <li class="accessory">Munition : Munitions haute pression P5/KX29 MM</li>
+                        <li>Lunette : Jak sans verre</li>
+                        <li>Bouche : Silencieux de quartier-maître</li>
+                        <li>Canon : Canon léger Auger 840</li>
+                        <li>Poignée avant : Garde-main X2R Edge BW-4</li>
+                        <li>Munition : Munitions haute pression P5/KX29 MM</li>
                     </div>
                 </ul>
             </div>
         </div>
-
     </div>
 
     <script>
-        function toggleAccessories(weaponId) {
-            var details = document.querySelector(`#${weaponId}-accessories .accessory-details`);
-            var button = document.querySelector(`#${weaponId}-accessories button`);
-            
-            if (details.style.display === 'none' || details.style.display === '') {
-                details.style.display = 'block';
-                details.classList.add('open');
-                button.innerHTML = '- Cacher les accessoires';
-            } else {
-                details.style.display = 'none';
-                details.classList.remove('open');
-                button.innerHTML = '+ Dérouler les accessoires';
-            }
+        function toggleAccessories(id) {
+            const details = document.querySelector(`#${id} .accessory-details`);
+            const isOpen = details.classList.contains('open');
+            details.classList.toggle('open', !isOpen);
         }
     </script>
 </body>
