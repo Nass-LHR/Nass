@@ -21,16 +21,16 @@
             flex-direction: column;
             justify-content: space-between;
             min-height: 100vh;
-            width: 100%; /* Utilisation de toute la largeur */
+            width: 100%;
         }
         header {
             background-color: #000000;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            position: relative; /* Permet d'ajuster la position du menu hamburger */
+            position: relative;
         }
         header h1 {
-            color: #ff00ff; /* Couleur rose fuchsia */
+            color: #ff00ff;
             text-transform: uppercase;
             letter-spacing: 2px;
             text-align: center;
@@ -42,7 +42,7 @@
         h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #ff00ff; /* Couleur rose fuchsia */
+            color: #ff00ff;
             animation: fadeIn 1.5s ease-in-out;
         }
         p {
@@ -57,7 +57,7 @@
             flex-wrap: wrap;
         }
         a {
-            color: #ff00ff; /* Couleur rose fuchsia */
+            color: #ff00ff;
             text-decoration: none;
             font-size: 1.5em;
             transition: transform 0.3s ease, text-shadow 0.3s ease;
@@ -84,7 +84,6 @@
             0% { opacity: 0; }
             100% { opacity: 1; }
         }
-        /* Styles pour le menu latéral */
         .menu {
             height: 100%;
             width: 250px;
@@ -100,7 +99,7 @@
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
-            color: #ff00ff; /* Couleur rose fuchsia */
+            color: #ff00ff;
             display: block;
             transition: 0.3s;
         }
@@ -109,13 +108,13 @@
         }
         .menu-btn {
             font-size: 30px;
-            color: #ff00ff; /* Couleur rose fuchsia */
+            color: #ff00ff;
             background: none;
             border: none;
             cursor: pointer;
             position: absolute;
             top: 30px;
-            left: 10px; /* Décale un peu le bouton par rapport au titre */
+            left: 10px;
         }
         .menu.open {
             left: 0;
@@ -125,23 +124,22 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            color: #ff00ff; /* Couleur rose fuchsia */
+            color: #ff00ff;
         }
 
-        /* Modifications pour mobile */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.5em; /* Taille plus petite du titre sur mobile */
-                margin-right: 50px; /* Décale légèrement le titre pour plus d'espace */
+                font-size: 1.5em;
+                margin-right: 50px;
             }
             .menu-btn {
-                top: 30px; /* Décale le bouton des trois traits */
-                left: 10px; /* Ajuste l'éloignement du titre */
+                top: 30px;
+                left: 10px;
                 position: absolute;
             }
             .menu {
-                width: 100%; /* Utilisation de toute la largeur */
-                left: 0; /* Le menu apparaît directement à gauche */
+                width: 100%;
+                left: -100%; /* Assurez-vous que le menu est caché par défaut */
             }
         }
     </style>
@@ -152,7 +150,6 @@
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </header>
 
-    <!-- Menu latéral -->
     <div id="menu" class="menu">
         <button class="close-btn" onclick="toggleMenu()">×</button>
         <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
@@ -176,12 +173,11 @@
     </footer>
 
     <script>
-        // Fonction pour ouvrir/fermer le menu
         function toggleMenu() {
             var menu = document.getElementById("menu");
             menu.classList.toggle("open");
             var button = document.querySelector(".menu-btn");
-            button.innerHTML = (menu.classList.contains("open")) ? "×" : "☰";  // Changer de bouton entre hamburger et croix
+            button.innerHTML = (menu.classList.contains("open")) ? "×" : "☰";
         }
     </script>
 </body>
