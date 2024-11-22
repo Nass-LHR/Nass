@@ -7,90 +7,152 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
+            background-color: #1c1c1c;
+            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+            background-size: cover;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            background-color: #1c1c1c;
-            color: white;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
         }
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             background-color: #000000;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            position: relative;
         }
         header h1 {
             color: #f0e68c;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin: 0;
-        }
-        .menu-btn {
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-            z-index: 100;
-        }
-        .menu {
-            position: fixed;
-            top: 0;
-            left: -250px;
-            width: 250px;
-            height: 100%;
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            transition: left 0.3s ease-in-out;
-            z-index: 50;
-            box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.3);
-        }
-        .menu.open {
-            left: 0;
-        }
-        .menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5em;
-            margin: 20px 0;
-            display: block;
+            text-align: center; /* Centrage du titre */
         }
         section {
-            margin-top: 80px;
+            margin: 50px auto;
             max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: left;
         }
         h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #f0e68c;
+            animation: fadeIn 1.5s ease-in-out;
         }
         p {
             font-size: 1.2em;
             margin-bottom: 40px;
+            color: #ffffff;
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        a {
+            color: #f0e68c;
+            text-decoration: none;
+            font-size: 1.5em;
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+        }
+        a:hover {
+            transform: scale(1.1);
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+        }
+        a img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
         }
         footer {
-            background-color: #333;
+            background-color: #333333;
             color: #ccc;
             padding: 15px;
-            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+        }
+        .button-class {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background-color: #f0e68c;
+            color: #1c1c1c;
+            text-decoration: none;
+            font-size: 1.5em;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, text-shadow 0.3s ease;
+        }
+        .button-class:hover {
+            transform: scale(1.1);
+            text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        /* Styles pour le menu latéral */
+        .menu {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #333333;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 10;
+        }
+        .menu a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #f0e68c;
+            display: block;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            color: #ffffff;
+        }
+        .menu-btn {
+            font-size: 30px;
+            color: #f0e68c;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .menu.open {
+            left: 0;
+        }
+        .close-btn {
+            font-size: 36px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #f0e68c;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
         <h1>Nass_LHR - Les INFORMABean's !!</h1>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </header>
 
+    <!-- Menu latéral -->
     <div id="menu" class="menu">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
         <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
         <a href="https://www.tiktok.com/@nass.lhr" target="_blank">TikTok</a>
         <a href="https://discord.gg/ANWxYPUanN" target="_blank">Discord</a>
+        <a href="classes-warzone.html" class="button-class">Mes Classes</a>
     </div>
 
     <section>
@@ -108,15 +170,12 @@
     </footer>
 
     <script>
+        // Fonction pour ouvrir/fermer le menu
         function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('open');
-            const btn = document.querySelector('.menu-btn');
-            if (menu.classList.contains('open')) {
-                btn.innerHTML = '×'; // Croisillon
-            } else {
-                btn.innerHTML = '☰'; // Hamburger
-            }
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("open");
+            var button = document.querySelector(".menu-btn");
+            button.innerHTML = (menu.classList.contains("open")) ? "×" : "☰";  // Changer de bouton entre hamburger et croix
         }
     </script>
 </body>
