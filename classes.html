@@ -41,11 +41,38 @@
         .accessories-list {
             list-style-type: none;
             padding: 0;
+            display: none;
         }
 
         .accessory {
             margin: 10px 0;
         }
+
+        .toggle-accessories {
+            background-color: #8a2be2; /* Violet rétro */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .toggle-accessories .plus {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            color: #8a2be2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
     </style>
 </head>
 <body>
@@ -57,7 +84,12 @@
             <div class="weapon-info">
                 <h3>XM4 - Fusil d'assaut</h3>
                 <p>Voici l'XM4, une arme polyvalente avec des accessoires pour améliorer sa précision et sa maniabilité.</p>
-                <h4>Accessoires :</h4>
+                
+                <!-- Bouton pour dérouler les accessoires -->
+                <button class="toggle-accessories" onclick="toggleAccessories()">
+                    <span class="plus">+</span> Dérouler les accessoires
+                </button>
+                
                 <ul class="accessories-list">
                     <li class="accessory">Lunette : Willis X3</li>
                     <li class="accessory">Bouche : Compensateur</li>
@@ -68,22 +100,22 @@
             </div>
         </div>
 
-        <div class="weapon">
-            <img src="https://i.imgur.com/RS0iUDy.jpeg" alt="Static-HV">
-            <div class="weapon-info">
-                <h3>Affliction Étrange - Mitraillette</h3>
-                <p>La mitraillette Static-HV offre un style unique et une excellente précision pour les combats rapprochés.</p>
-                <h4>Accessoires :</h4>
-                <ul class="accessories-list">
-                    <li class="accessory">Lunette : Jak sans verre</li>
-                    <li class="accessory">Bouche : Silencieux de quartier-maître</li>
-                    <li class="accessory">Canon : Canon léger Auger 840</li>
-                    <li class="accessory">Poignée avant : Garde-main X2R Edge BW-4</li>
-                    <li class="accessory">Munition : Munitions haute pression P5/KX29 MM</li>
-                </ul>
-            </div>
-        </div>
-
     </div>
+
+    <script>
+        function toggleAccessories() {
+            var list = document.querySelector('.accessories-list');
+            var button = document.querySelector('.toggle-accessories');
+            var plus = document.querySelector('.plus');
+
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+                plus.textContent = '-';  // Change le + en -
+            } else {
+                list.style.display = 'none';
+                plus.textContent = '+';  // Change le - en +
+            }
+        }
+    </script>
 </body>
 </html>
