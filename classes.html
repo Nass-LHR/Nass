@@ -3,60 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes Classes - Warzone</title>
+    <title>Mes Armes et Accessoires</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1c1c1c;
-            color: #fff;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
-        header {
-            background-color: #000;
-            padding: 15px;
-            text-align: center;
-        }
-        h1 {
-            color: #f0e68c;
-        }
-        section {
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
             padding: 20px;
         }
-        h2 {
-            color: #f0e68c;
+
+        .weapon {
+            display: flex;
+            margin-bottom: 50px;
         }
-        p {
-            font-size: 1.2em;
-            color: #fff;
+
+        .weapon img {
+            width: 400px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .weapon-info {
+            max-width: 600px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .accessories-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .accessory {
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h2>Armes et Accessoires</h2>
 
-<header>
-    <h1>Mes Classes - Warzone</h1>
-</header>
+        <div class="weapon">
+            <img src="path_to_image_1.jpg" alt="XM4">
+            <div class="weapon-info">
+                <h3>XM4 - Fusil d'assaut</h3>
+                <p>Voici l'XM4, une arme polyvalente avec des accessoires pour améliorer sa précision et sa maniabilité.</p>
+                <h4>Accessoires :</h4>
+                <ul class="accessories-list">
+                    <li class="accessory">Lunette : Willis X3</li>
+                    <li class="accessory">Bouche : Compensateur</li>
+                    <li class="accessory">Canon : Canon renforcé</li>
+                    <li class="accessory">Poignée avant : Verticale</li>
+                    <li class="accessory">Chargeur : Chargeur étendu II</li>
+                </ul>
+            </div>
+        </div>
 
-<section>
-    <h2>Ma classe préférée</h2>
-    <p>
-        Ici, je partage mes configurations de classes les plus efficaces pour Warzone, adaptées à différents types de gameplay.
-    </p>
-    <h3>Classe 1: Assault Rifle - Recoil Control</h3>
-    <ul>
-        <li>Arme: M4A1</li>
-        <li>Accessoires: Red Dot Sight, Monolithic Suppressor, Commando Foregrip</li>
-        <li>Avantages: EOD, Ghost, Amped</li>
-    </ul>
-    <h3>Classe 2: SMG - Close Combat</h3>
-    <ul>
-        <li>Arme: MP5</li>
-        <li>Accessoires: Tac Laser, Merc Foregrip, Sleight of Hand</li>
-        <li>Avantages: Tracker, Battle Hardened, Restock</li>
-    </ul>
-    <!-- Ajoute d'autres classes ici -->
-</section>
+        <div class="weapon">
+            <img src="path_to_image_2.jpg" alt="Affliction Étrange">
+            <div class="weapon-info">
+                <h3>Affliction Étrange - Mitraillette</h3>
+                <p>La mitraillette Affliction Étrange offre un style unique et une excellente précision pour les combats rapprochés.</p>
+                <h4>Accessoires :</h4>
+                <ul class="accessories-list">
+                    <li class="accessory">Lunette : Jak sans verre</li>
+                    <li class="accessory">Bouche : Silencieux de quartier-maître</li>
+                    <li class="accessory">Canon : Canon léger Auger 840</li>
+                    <li class="accessory">Poignée avant : Garde-main X2R Edge BW-4</li>
+                    <li class="accessory">Munition : Munitions haute pression P5/KX29 MM</li>
+                </ul>
+            </div>
+        </div>
 
+    </div>
 </body>
 </html>
