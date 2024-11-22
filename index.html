@@ -8,152 +8,77 @@
         body {
             font-family: 'Arial', sans-serif;
             background-color: #1c1c1c;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-            background-size: cover;
             color: #ffffff;
             margin: 0;
             padding: 0;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 100vh;
         }
-
         header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #000000;
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
-
         header h1 {
             color: #f0e68c;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin: 0;
+            text-align: center;
         }
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-        }
-
-        .menu-toggle div {
-            width: 30px;
-            height: 3px;
-            background-color: #f0e68c;
-        }
-
         .menu {
+            display: none;
             position: fixed;
             top: 0;
             left: -250px;
-            height: 100%;
             width: 250px;
+            height: 100%;
             background-color: #333;
-            transition: left 0.3s ease;
-            padding-top: 60px;
+            color: white;
+            padding: 20px;
+            transition: left 0.3s ease-in-out;
         }
-
         .menu a {
-            color: #f0e68c;
+            color: white;
             text-decoration: none;
             font-size: 1.5em;
-            padding: 15px;
+            margin: 20px 0;
             display: block;
-            transition: background-color 0.3s;
         }
-
-        .menu a:hover {
-            background-color: #575757;
+        .menu-btn {
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
         }
-
         .menu.open {
             left: 0;
-        }
-
-        section {
-            margin: 50px auto;
-            max-width: 900px;
-        }
-
-        footer {
-            background-color: #333333;
-            color: #ccc;
-            padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Mobile responsive */
-        @media screen and (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-
-            header h1 {
-                font-size: 1.5em;
-            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="menu-btn" onclick="toggleMenu()">&#9776;</div>
+        <h1>Nass_LHR - Les INFORMABean's !!</h1>
+    </header>
 
-<header>
-    <h1>Nass_LHR - Les INFORMABean's !!</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
+    <div id="menu" class="menu">
+        <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
+        <a href="https://www.tiktok.com/@nass.lhr" target="_blank">TikTok</a>
+        <a href="https://discord.gg/ANWxYPUanN" target="_blank">Discord</a>
     </div>
-</header>
 
-<div class="menu">
-    <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
-    <a href="https://www.tiktok.com/@nass.lhr" target="_blank">TikTok</a>
-    <a href="https://discord.gg/ANWxYPUanN" target="_blank">Discord</a>
-    <a href="classes-warzone.html">Mes Classes</a>
-</div>
-
-<section>
-    <h2>Bienvenue sur mon site !</h2>
-    <p>
-        Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay et des stratégies. Parfois, c’est du pur fun, comme dans mes vidéos où, malgré un chargeur vidé sur l’ennemi, je finis éliminée en deux balles. Vous voyez le genre !
-    </p>
-    <p>
-        Sur Twitch, je streame mes parties en direct et interagis avec vous en temps réel. Vous pouvez discuter avec moi pendant que je joue, et ensemble on partage des moments de rage ou de victoire. Rejoignez-moi pour des sessions de jeu, des discussions et des échanges entre passionnés !
-    </p>
-</section>
-
-<footer>
-    © 2024 Nass_LHR | Tous droits réservés
-</footer>
-
-<script>
-    function toggleMenu() {
-        const menu = document.querySelector('.menu');
-        menu.classList.toggle('open');
-        
-        const bars = document.querySelectorAll('.menu-toggle div');
-        bars.forEach((bar, index) => {
-            bar.style.transition = 'all 0.3s ease';
-            if (index === 0) {
-                bar.style.transform = menu.classList.contains('open') ? 'rotate(45deg) translate(5px, 5px)' : 'rotate(0)';
-            } else if (index === 1) {
-                bar.style.opacity = menu.classList.contains('open') ? '0' : '1';
-            } else if (index === 2) {
-                bar.style.transform = menu.classList.contains('open') ? 'rotate(-45deg) translate(5px, -5px)' : 'rotate(0)';
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('open');
+            const btn = document.querySelector('.menu-btn');
+            if (menu.classList.contains('open')) {
+                btn.innerHTML = '×'; // Croisillon
+            } else {
+                btn.innerHTML = '☰'; // Hamburger
             }
-        });
-    }
-</script>
-
+        }
+    </script>
 </body>
 </html>
