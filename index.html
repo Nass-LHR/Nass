@@ -10,10 +10,8 @@
     <style>
         body {
             font-family: 'Edu AU VIC WA NT Pre', sans-serif;
-            background-color: #1c1c1c;
-            background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
-            background-size: cover;
-            color: #222222; /* Gris Atalan #2 */
+            background-color: #000000; /* Noir */
+            color: #FFFFFF; /* Blanc */
             margin: 0;
             padding: 0;
             text-align: center;
@@ -24,21 +22,21 @@
             min-height: 100vh;
         }
         header {
-            background-color: #000000;
+            background-color: #000000; /* Noir */
             padding: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             position: relative;
         }
         header h1 {
-            color: #222222; /* Gris Atalan #2 */
+            color: #FFFFFF; /* Blanc */
             text-transform: uppercase;
             letter-spacing: 2px;
-            text-align: center; /* Centre le titre */
+            text-align: center;
             margin: 0;
         }
         .menu-btn {
             font-size: 30px;
-            color: #222222; /* Gris Atalan #2 */
+            color: #FFFFFF; /* Blanc */
             background: none;
             border: none;
             cursor: pointer;
@@ -53,13 +51,12 @@
         h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            color: #222222; /* Gris Atalan #2 */
-            animation: fadeIn 1.5s ease-in-out;
+            color: #FFFFFF; /* Blanc */
         }
         p {
             font-size: 1.2em;
             margin-bottom: 40px;
-            color: #222222; /* Gris Atalan #2 */
+            color: #FFFFFF; /* Blanc */
         }
         .links {
             display: flex;
@@ -68,7 +65,7 @@
             flex-wrap: wrap;
         }
         a {
-            color: #222222; /* Gris Atalan #2 */
+            color: #FFFFFF; /* Blanc */
             text-decoration: none;
             font-size: 1.5em;
             transition: transform 0.3s ease, text-shadow 0.3s ease;
@@ -83,27 +80,21 @@
             margin-bottom: 10px;
         }
         footer {
-            background-color: #333333;
-            color: #222222; /* Gris Atalan #2 */
+            background-color: #000000; /* Noir */
+            color: #FFFFFF; /* Blanc */
             padding: 15px;
             position: relative;
             bottom: 0;
             width: 100%;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-            font-family: Arial, sans-serif;
         }
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
-        /* Menu latéral */
         .menu {
             height: 100%;
             width: 250px;
             position: fixed;
             top: 0;
             left: -250px;
-            background-color: #333333;
+            background-color: #000000; /* Noir */
             transition: 0.3s;
             padding-top: 60px;
             z-index: 10;
@@ -112,12 +103,12 @@
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 25px;
-            color: #222222; /* Gris Atalan #2 */
+            color: #FFFFFF; /* Blanc */
             display: block;
             transition: 0.3s;
         }
         .menu a:hover {
-            color: #ffffff;
+            color: #CCCCCC; /* Gris clair pour l'effet de survol */
         }
         .menu.open {
             left: 0;
@@ -127,7 +118,7 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            color: #222222; /* Gris Atalan #2 */
+            color: #FFFFFF; /* Blanc */
         }
     </style>
 </head>
@@ -137,7 +128,6 @@
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
     </header>
 
-    <!-- Menu latéral -->
     <div id="menu" class="menu">
         <button class="close-btn" onclick="toggleMenu()">×</button>
         <a href="https://www.twitch.tv/Nass_LHR" target="_blank">Twitch</a>
@@ -149,10 +139,7 @@
     <section>
         <h2>Bienvenue sur mon site !</h2>
         <p>
-            Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay et des stratégies. Parfois, c’est du pur fun, comme dans mes vidéos où, malgré un chargeur vidé sur l’ennemi, je finis éliminée en deux balles. Vous voyez le genre !
-        </p>
-        <p>
-            Sur Twitch, je streame mes parties en direct et interagis avec vous en temps réel. Vous pouvez discuter avec moi pendant que je joue, et ensemble on partage des moments de rage ou de victoire. Rejoignez-moi pour des sessions de jeu, des discussions et des échanges entre passionnés !
+            Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay et des stratégies.
         </p>
     </section>
 
