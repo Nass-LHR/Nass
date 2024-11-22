@@ -14,49 +14,51 @@
         }
 
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
 
         .weapon {
             display: flex;
-            margin-bottom: 50px;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
         }
 
         .weapon img {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             height: auto;
-            margin-right: 20px;
+            border-radius: 10px 10px 0 0;
             object-fit: contain;
         }
 
         .weapon-info {
-            max-width: 600px;
-            background-color: #ffffff;
+            width: 100%;
             padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .weapon-info h3, .weapon-info p, .weapon-info h4, .accessories-list li {
-            color: #333;
-        }
-
-        h2 {
             text-align: center;
+        }
+
+        .weapon-info h3, .weapon-info h4, .weapon-info p, .accessories-list li {
+            margin: 10px 0;
         }
 
         button {
             background-color: #9b59b6; /* Violet rétro */
             color: white;
             border: none;
-            padding: 10px;
+            padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
         }
 
         button:hover {
@@ -74,11 +76,29 @@
             max-height: 500px; /* Ajustez en fonction du contenu */
             opacity: 1;
         }
+
+        @media (min-width: 768px) {
+            .weapon {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .weapon img {
+                width: 40%;
+                margin-right: 20px;
+                border-radius: 10px 0 0 10px;
+            }
+
+            .weapon-info {
+                width: 60%;
+                text-align: left;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Armes et Accessoires</h2>
+        <h2 style="text-align: center;">Armes et Accessoires</h2>
 
         <!-- XM4 -->
         <div class="weapon">
@@ -124,8 +144,7 @@
     <script>
         function toggleAccessories(id) {
             const details = document.querySelector(`#${id} .accessory-details`);
-            const isOpen = details.classList.contains('open');
-            details.classList.toggle('open', !isOpen);
+            details.classList.toggle('open');
         }
     </script>
 </body>
