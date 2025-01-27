@@ -77,6 +77,21 @@
             opacity: 1;
         }
 
+        .accessories-list li {
+            list-style-type: none;
+        }
+
+        .accessories-list li span {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .accessories-list li span:hover {
+            background-color: #9b59b6; /* Violet rétro sur le survol */
+            color: white;
+            cursor: pointer;
+            transform: scale(1.05); /* Léger agrandissement du texte */
+        }
+
         @media (min-width: 768px) {
             .weapon {
                 flex-direction: row;
@@ -100,41 +115,45 @@
     <div class="container">
         <h2 style="text-align: center;">Armes et Accessoires</h2>
 
-        <!-- XM4 -->
+        <!-- PP-919 -->
         <div class="weapon">
-            <img src="https://i.imgur.com/U4z1Zrl.jpeg" alt="XM4">
+            <img src="https://i.imgur.com/JomwxTb.jpeg" alt="PP-919">
             <div class="weapon-info">
-                <h3>XM4 - Fusil d'assaut</h3>
-                <p>Voici l'XM4, une arme polyvalente avec des accessoires pour améliorer sa précision et sa maniabilité.</p>
+                <h3>PP-919 - Pistolet-mitrailleur</h3>
+                <p>Le PP-919 est un pistolet-mitrailleur compact et rapide, idéal pour les combats rapprochés avec ses accessoires spécialement choisis pour améliorer sa maniabilité et sa précision.</p>
                 <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('xm4-accessories')">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="xm4-accessories">
+                <button onclick="toggleAccessories('pp919-accessories')">+ Dérouler les accessoires</button>
+                <ul class="accessories-list" id="pp919-accessories">
                     <div class="accessory-details">
-                        <li>Lunette : Willis X3</li>
-                        <li>Bouche : Compensateur</li>
-                        <li>Canon : Canon renforcé</li>
-                        <li>Poignée avant : Verticale</li>
-                        <li>Chargeur : Chargeur étendu II</li>
+                        <li><span>Lunette : Merlin Mini</span></li>
+                        <li><span>Bouche : Compensateur porté</span></li>
+                        <li><span>Canon : Canon renforcé</span></li>
+                        <li><span>Chargeur : Chargeur rapide I</span></li>
+                        <li><span>Poignée arrière : Poignée ergonomique</span></li>
+                        <li><span>Crosse : Crosse de combat</span></li>
+                        <li><span>Laser : Laser mouvement rapide</span></li>
                     </div>
                 </ul>
             </div>
         </div>
 
-        <!-- Static-HV -->
+        <!-- XM4 -->
         <div class="weapon">
-            <img src="https://i.imgur.com/RS0iUDy.jpeg" alt="Static-HV">
+            <img src="https://i.imgur.com/gFbwnQq.jpeg" alt="XM4">
             <div class="weapon-info">
-                <h3>Affliction Étrange - Mitraillette</h3>
-                <p>La mitraillette Static-HV offre un style unique et une excellente précision pour les combats rapprochés.</p>
+                <h3>XM4 - Fusil d'assaut</h3>
+                <p>Le XM4 est un fusil d'assaut puissant et polyvalent, idéal pour les tirs à moyenne portée. Ses accessoires permettent de contrôler le recul et d'améliorer la précision dans toutes les situations.</p>
                 <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('static-hv-accessories')">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="static-hv-accessories">
+                <button onclick="toggleAccessories('xm4-accessories')">+ Dérouler les accessoires</button>
+                <ul class="accessories-list" id="xm4-accessories">
                     <div class="accessory-details">
-                        <li>Lunette : Jak sans verre</li>
-                        <li>Bouche : Silencieux de quartier-maître</li>
-                        <li>Canon : Canon léger Auger 840</li>
-                        <li>Poignée avant : Garde-main X2R Edge BW-4</li>
-                        <li>Munition : Munitions haute pression P5/KX29 MM</li>
+                        <li><span>Lunette : Willis X3</span></li>
+                        <li><span>Bouche : Compensateur porté</span></li>
+                        <li><span>Canon : Canon rainuré</span></li>
+                        <li><span>Accessoire canon : Poignée avant de précision</span></li>
+                        <li><span>Chargeur : Chargeur étendu III</span></li>
+                        <li><span>Crosse : Crosse avec amortissement de recul</span></li>
+                        <li><span>mods de tir : ressort de recul</span></li>
                     </div>
                 </ul>
             </div>
