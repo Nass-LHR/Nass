@@ -122,7 +122,7 @@
                 <h3>PP-919 - Mitraillette</h3>
                 <p>Le PP-919 est un pistolet-mitrailleur compact et rapide, idéal pour les combats rapprochés avec ses accessoires spécialement choisis pour améliorer sa maniabilité et sa précision.</p>
                 <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('pp919-accessories')">+ Dérouler les accessoires</button>
+                <button onclick="toggleAccessories('pp919-accessories', this)">+ Dérouler les accessoires</button>
                 <ul class="accessories-list" id="pp919-accessories">
                     <div class="accessory-details">
                         <li><span>Lunette : Merlin Mini(propre à chacun)</span></li>
@@ -145,7 +145,7 @@
                 <h3>XM4 - Fusil d'assaut</h3>
                 <p>Le XM4 est un fusil d'assaut puissant et polyvalent, idéal pour les tirs à moyenne portée. Ses accessoires permettent de contrôler le recul et d'améliorer la précision dans toutes les situations.</p>
                 <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('xm4-accessories')">+ Dérouler les accessoires</button>
+                <button onclick="toggleAccessories('xm4-accessories', this)">+ Dérouler les accessoires</button>
                 <ul class="accessories-list" id="xm4-accessories">
                     <div class="accessory-details">
                         <li><span>Lunette : Willis X3(propre à chacun)</span></li>
@@ -163,9 +163,16 @@
     </div>
 
     <script>
-        function toggleAccessories(id) {
+        function toggleAccessories(id, button) {
             const details = document.querySelector(`#${id} .accessory-details`);
             details.classList.toggle('open');
+
+            // Change the button text based on the accessory details' visibility
+            if (details.classList.contains('open')) {
+                button.textContent = "− Fermer les accessoires";
+            } else {
+                button.textContent = "+ Dérouler les accessoires";
+            }
         }
     </script>
 </body>
