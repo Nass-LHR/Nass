@@ -8,12 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Edu AU VIC WA NT Pre', sans-serif;
             background-color: #333;
             color: #FFF;
-            margin: 0;
-            padding: 0;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -21,16 +25,19 @@
             background-image: url('https://i.imgur.com/bbjFoOw.png');
             background-repeat: repeat;
         }
+
         header {
             background-color: #000;
             padding: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
             position: relative;
         }
+
         header h1 {
             font-size: 1.8em;
             margin: 0;
         }
+
         .menu-btn {
             font-size: 24px;
             color: #FFF;
@@ -41,43 +48,58 @@
             top: 15px;
             left: 15px;
         }
-        section {
-            margin: 30px auto;
-            max-width: 900px;
-            padding: 0 15px;
+
+        .content {
+            flex: 1; /* Permet d'occuper tout l'espace disponible */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centre verticalement */
+            align-items: center;
         }
+
+        section {
+            max-width: 900px;
+            padding: 30px 15px;
+        }
+
         h2 {
             font-size: 2em;
             margin-bottom: 15px;
         }
+
         p {
             font-size: 1.1em;
             margin-bottom: 30px;
         }
+
         .links {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
+
         a {
             color: #FFF;
             text-decoration: none;
             font-size: 1.3em;
             transition: transform 0.3s ease, text-shadow 0.3s ease;
         }
+
         a:hover {
             transform: scale(1.1);
             text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
         }
+
         footer {
             background-color: #000;
             color: #FFF;
             padding: 10px;
             width: 100%;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-            bottom: 0;
+            text-align: center;
         }
+
         .menu {
             height: 100%;
             width: 250px;
@@ -89,6 +111,7 @@
             padding-top: 60px;
             z-index: 10;
         }
+
         .menu a {
             padding: 10px 20px;
             text-decoration: none;
@@ -96,12 +119,15 @@
             color: #FFF;
             display: block;
         }
+
         .menu a:hover {
             color: #CCC;
         }
+
         .menu.open {
             left: 0;
         }
+
         .close-btn {
             font-size: 30px;
             position: absolute;
@@ -149,12 +175,14 @@
         <a href="classes.html">Mes Classes</a>
     </div>
 
-    <section>
-        <h2>Bienvenue sur mon site !</h2>
-        <p>
-            Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay, des astuces et des défis avec ma communauté. Rejoins-moi pour vivre des expériences inoubliables !
-        </p>
-    </section>
+    <div class="content">
+        <section>
+            <h2>Bienvenue sur mon site !</h2>
+            <p>
+                Je suis Nass_LHR, connue aussi sous le pseudo Mme Bean sur TikTok. Mon contenu est surtout centré autour de Call of Duty: Warzone, où je partage des moments épiques de gameplay, des astuces et des défis avec ma communauté. Rejoins-moi pour vivre des expériences inoubliables !
+            </p>
+        </section>
+    </div>
 
     <footer>
         © 2024 Nass_LHR | Tous droits réservés
