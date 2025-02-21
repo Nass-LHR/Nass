@@ -30,17 +30,19 @@
         }
 
         .weapon {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    color: #333;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    overflow: hidden;
-    min-height: 400px; /* Ajustez cette valeur selon vos besoins */
-}
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow: hidden;
+            min-height: 400px; /* Ajustez cette valeur selon vos besoins */
+            width: 100%; /* Ajouté pour uniformiser la largeur */
+            max-width: 400px; /* Ajouté pour limiter la largeur */
+        }
 
         .weapon img {
             width: 100%;
@@ -102,6 +104,8 @@
             .weapon {
                 flex-direction: row;
                 align-items: flex-start;
+                width: 100%;
+                max-width: none; /* Ajouté pour supprimer la limite de largeur sur les écrans plus larges */
             }
 
             .weapon img {
@@ -196,9 +200,8 @@
                 </ul>
             </div>
         </div>
-    </div>
-    
-    <div class="weapon">
+
+        <div class="weapon">
             <img src="https://i.imgur.com/3jNQM37.jpeg" alt="C9">
             <div class="weapon-info">
                 <h3>C9 - Mitraillette</h3>
