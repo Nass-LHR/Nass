@@ -100,13 +100,12 @@
             transform: scale(1.05);
         }
 
-        /* Ajout d'un style flexbox pour centrer correctement les armes */
+       /* Ajout d'un style flexbox pour centrer correctement les armes */
 .container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -115,9 +114,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    max-width: 1000px;
+    justify-content: center;
 }
 
 .armes img {
@@ -131,9 +130,7 @@
 /* Ajustement pour s'assurer que les dernières armes restent bien centrées */
 @media (max-width: 768px) {
     .armes {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
     }
 }
 
@@ -141,7 +138,7 @@
     .armes {
         grid-template-columns: repeat(1, 1fr);
     }
-} 
+}
 
 
             .weapon-info {
