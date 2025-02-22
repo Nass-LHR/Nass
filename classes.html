@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <!-- Google tag (gtag.js) -->
@@ -39,9 +39,11 @@
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
             overflow: hidden;
-            min-height: 400px; /* Ajustez cette valeur selon vos besoins */
-            width: 100%; /* Ajouté pour uniformiser la largeur */
-            max-width: 400px; /* Ajouté pour limiter la largeur */
+            min-height: 400px;
+            width: 100%;
+            max-width: 400px;
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         .weapon img {
@@ -100,50 +102,35 @@
             transform: scale(1.05);
         }
 
-      /* Ajout d'un style flexbox pour centrer correctement les armes */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        /* Modification des styles pour aligner les armes verticalement et les décoller des côtés */
+        .armes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
 
-.armes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1000px;
-}
+        .arme {
+            width: 100%;
+            max-width: 400px;
+        }
 
-.armes img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-}
+        .weapon-info {
+            width: 100%;
+            text-align: left;
+        }
 
-@media (max-width: 768px) {
-    .armes {
-        justify-content: center;
-    }
-}
+        @media (max-width: 768px) {
+            .armes {
+                justify-content: center;
+            }
+        }
 
-@media (max-width: 480px) {
-    .armes {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-        
-            .weapon-info {
-                width: 60%;
-                text-align: left;
+        @media (max-width: 480px) {
+            .armes {
+                flex-direction: column;
+                align-items: center;
             }
         }
     </style>
@@ -152,159 +139,103 @@
     <div class="container">
         <h2 style="text-align: center;">Armes et Accessoires</h2>
 
-        <div class="weapon">
-            <img src="https://i.imgur.com/jjrDHeu.jpeg" alt="MODEL L">
-            <div class="weapon-info">
-                <h3>MODEL L - Fusil d'assaut</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('model-l-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="model-l-accessories">
-                    <div class="accessory-details">
-                        <li><span>Lunette : Willis x3</span></li>
-                        <li><span>Bouche : Compensateur</span></li>
-                        <li><span>Canon : Canon renforcé</span></li>
-                        <li><span>Accessoire canon : Poignée avant de ranger</span></li>
-                        <li><span>Chargeur : Chargeur étendu II</span></li>
-                    </div>
-                </ul>
+        <div class="armes">
+            <div class="weapon">
+                <img src="https://i.imgur.com/jjrDHeu.jpeg" alt="MODEL L">
+                <div class="weapon-info">
+                    <h3>MODEL L - Fusil d'assaut</h3>
+                    <h4>Accessoires :</h4>
+                    <button onclick="toggleAccessories('model-l-accessories', this)">+ Dérouler les accessoires</button>
+                    <ul class="accessories-list" id="model-l-accessories">
+                        <div class="accessory-details">
+                            <li><span>Lunette : Willis x3</span></li>
+                            <li><span>Bouche : Compensateur</span></li>
+                            <li><span>Canon : Canon renforcé</span></li>
+                            <li><span>Accessoire canon : Poignée avant de ranger</span></li>
+                            <li><span>Chargeur : Chargeur étendu II</span></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="weapon">
-            <img src="https://i.imgur.com/ZdPg1fb.jpeg" alt="Superi">
-            <div class="weapon-info">
-                <h3>Superi - Mitraillette (MW3)</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('superi-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="superi-accessories">
-                    <div class="accessory-details">
-                        <li><span>Canon : Court bore 99</span></li>
-                        <li><span>Accessoire canon : Jak slash</span></li>
-                        <li><span>Chargeur : Chargeur de 40 cartouches</span></li>
-                        <li><span>Poignée arrière : Poignée phantom</span></li>
-                        <li><span>Crosse : Crosse rescu-9</span></li>
-                    </div>
-                </ul>
+            <div class="weapon">
+                <img src="https://i.imgur.com/ZdPg1fb.jpeg" alt="Superi">
+                <div class="weapon-info">
+                    <h3>Superi - Mitraillette (MW3)</h3>
+                    <h4>Accessoires :</h4>
+                    <button onclick="toggleAccessories('superi-accessories', this)">+ Dérouler les accessoires</button>
+                    <ul class="accessories-list" id="superi-accessories">
+                        <div class="accessory-details">
+                            <li><span>Canon : Court bore 99</span></li>
+                            <li><span>Accessoire canon : Jak slash</span></li>
+                            <li><span>Chargeur : Chargeur de 40 cartouches</span></li>
+                            <li><span>Poignée arrière : Poignée phantom</span></li>
+                            <li><span>Crosse : Crosse rescu-9</span></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="weapon">
-            <img src="https://i.imgur.com/qQxFJyV.jpeg" alt="PP-919">
-            <div class="weapon-info">
-                <h3>PP-919 - Mitraillette</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('pp919-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="pp919-accessories">
-                    <div class="accessory-details">
-                        <li><span>Lunette  : Mérlin Mini</span></li>
-                        <li><span>Bouche : Compensateur porté</span></li>
-                        <li><span>Canon : Canon renforcé</span></li>
-                        <li><span>Chargeur : Chargeur rapide I</span></li>
-                        <li><span>Crosse : Crosse de combat</span></li>
-                        <li><span>ALaser : Laser mouvement rapide</span></li>
-                        <li><span>Mods de tir : Munition présurisées 9x18mm makarov</span></li>
-                    </div>
-                </ul>
+            <div class="weapon">
+                <img src="https://i.imgur.com/qQxFJyV.jpeg" alt="PP-919">
+                <div class="weapon-info">
+                    <h3>PP-919 - Mitraillette</h3>
+                    <h4>Accessoires :</h4>
+                    <button onclick="toggleAccessories('pp919-accessories', this)">+ Dérouler les accessoires</button>
+                    <ul class="accessories-list" id="pp919-accessories">
+                        <div class="accessory-details">
+                            <li><span>Lunette  : Mérlin Mini</span></li>
+                            <li><span>Bouche : Compensateur porté</span></li>
+                            <li><span>Canon : Canon renforcé</span></li>
+                            <li><span>Chargeur : Chargeur rapide I</span></li>
+                            <li><span>Crosse : Crosse de combat</span></li>
+                            <li><span>ALaser : Laser mouvement rapide</span></li>
+                            <li><span>Mods de tir : Munition présurisées 9x18mm makarov</span></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="weapon">
-            <img src="https://i.imgur.com/osOXZzZ.jpeg" alt="XM4">
-            <div class="weapon-info">
-                <h3>XM4 - Fusil d'assaut</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('xm4-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="xm4-accessories">
-                    <div class="accessory-details"> 
-                        <li><span>Bouche : Compensateur porté</span></li> 
-                        <li><span>Canon : Canon de rainuré</span></li> 
-                        <li><span>Accessoire canon : poignée avant de précision</span></li> 
-                        <li><span>Poignée arrière: Poignée ergonomique</span></li> 
-                        <li><span>Crosse : Crosse avec amortisseur de recul</span></li> 
-                        <li><span>Chargeur : Chargeur étendu III</span></li> 
-                        <li><span>Mods de tir : Ressort de recul</span></li>
-                    </div>
-                </ul>
+            <div class="weapon">
+                <img src="https://i.imgur.com/osOXZzZ.jpeg" alt="XM4">
+                <div class="weapon-info">
+                    <h3>XM4 - Fusil d'assaut</h3>
+                    <h4>Accessoires :</h4>
+                    <button onclick="toggleAccessories('xm4-accessories', this)">+ Dérouler les accessoires</button>
+                    <ul class="accessories-list" id="xm4-accessories">
+                        <div class="accessory-details"> 
+                            <li><span>Bouche : Compensateur porté</span></li> 
+                            <li><span>Canon : Canon de rainuré</span></li> 
+                            <li><span>Accessoire canon : poignée avant de précision</span></li> 
+                            <li><span>Poignée arrière: Poignée ergonomique</span></li> 
+                            <li><span>Crosse : Crosse avec amortisseur de recul</span></li> 
+                            <li><span>Chargeur : Chargeur étendu III</span></li> 
+                            <li><span>Mods de tir : Ressort de recul</span></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
-        </div>
 
-        <div class="weapon">
-            <img src="https://i.imgur.com/3jNQM37.jpeg" alt="C9">
-            <div class="weapon-info">
-                <h3>C9 - Mitraillette</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('C9-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="C9-accessories">
-                    <div class="accessory-details">
-                        <li><span>Canon : Canon de renforcé</span></li>
-                        <li><span>Accessoire canon : poignée avant de ranger</span></li>
-                        <li><span>Poignée arrière: Poignée ergonomique</span></li>
-                        <li><span>Chargeur : Chargeur étendu II</span></li>
-                        <li><span>poignée arrière : Poignée érgonomique</span></li>
-                        <li><span>Crosse : Crosse équilibrée</span></li>
-                    </div>
-                </ul>
+            <div class="weapon">
+                <img src="https://i.imgur.com/3jNQM37.jpeg" alt="C9">
+                <div class="weapon-info">
+                    <h3>C9 - Mitraillette</h3>
+                    <h4>Accessoires :</h4>
+                    <button onclick="toggleAccessories('C9-accessories', this)">+ Dérouler les accessoires</button>
+                    <ul class="accessories-list" id="C9-accessories">
+                        <div class="accessory-details">
+                            <li><span>Canon : Canon de renforcé</span></li>
+                            <li><span>Accessoire canon : poignée avant de ranger</span></li>
+                            <li><span>Poignée arrière: Poignée ergonomique</span></li>
+                            <li><span>Chargeur : Chargeur étendu II</span></li>
+                            <li><span>poignée arrière : Poignée érgonomique</span></li>
+                            <li><span>Crosse : Crosse équilibrée</span></li>
+                        </div>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    
-    <div class="weapon">
-            <img src="https://i.imgur.com/dJX2OL8.jpeg" alt="GPR 91">
-            <div class="weapon-info">
-                <h3>GPR 91 - Fusil d'assaut</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('gpr91-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="gpr91-accessories">
-                    <div class="accessory-details">
-                        <li><span>Lunette : Willis x3</span></li>
-                        <li><span>Bouche : Compensateur</span></li>
-                        <li><span>Canon : Canon renforcé</span></li>
-                        <li><span>Accessoire canon : Poignée avant verticale</span></li>
-                        <li><span>Chargeur : Chargeur étendu II</span></li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </div>
-       
-    <div class="weapon">
-            <img src="https://i.imgur.com/3obOHqg.jpeg" alt="KOMPAKT 92">
-            <div class="weapon-info">
-                <h3>KOMPAKT 92 - Mitraillette</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('kompakt92-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="kompakt92-accessories">
-                    <div class="accessory-details">
-                        <li><span>Bouche : Compensateur</span></li>
-                        <li><span>Canon : Canon renforcé</span></li>
-                        <li><span>Chargeur : Chargeur étendu III</span></li>
-                        <li><span>Poignée arrière : Poignée de combat</span></li>
-                        <li><span>Crosse : Pas de crosse</span></li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </div>
-           
-    <div class="weapon">
-            <img src="https://i.imgur.com/3s88hYn.jpeg" alt="KAR98K">
-            <div class="weapon-info">
-                <h3>KAR98K - Fusil tactique</h3>
-                <h4>Accessoires :</h4>
-                <button onclick="toggleAccessories('kar98k-accessories', this)">+ Dérouler les accessoires</button>
-                <ul class="accessories-list" id="kar98k-accessories">
-                    <div class="accessory-details">
-                        <li><span>Lunette : Forge tac delta 4</span></li>
-                        <li><span>Accessoire canon : Garde-main dr-6</span></li>
-                        <li><span>Sangles : Sangles de ciblage</span></li>
-                        <li><span>Laser : Laser sl razorhawk</span></li>
-                        <li><span>Munitions : Grain élevé 7,92x57n MM</span></li>
-                    </div>
-                </ul>
-            </div>
-        </div>
-    </div>
-    
 
     <script>
         function toggleAccessories(id, button) {
