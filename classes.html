@@ -100,20 +100,37 @@
             transform: scale(1.05);
         }
 
-         @media (min-width: 768px) {
-    .weapon {
-        flex-direction: row;
-        align-items: flex-start;
-        width: 90%; /* Réduit la largeur pour éviter l'étirement */
-        max-width: 800px; /* Limite la taille maximale */
+        /* Ajout d'un style flexbox pour centrer correctement les armes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.armes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.armes img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Ajustement pour centrer les 3 dernières armes */
+@media (max-width: 768px) {
+    .armes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
-.weapon img {
-    width: 100%;
-    height: auto; /* Empêche l'image de s'étirer verticalement */
-    object-fit: cover; /* Assure un bon rendu de l'image */
-}
 
             .weapon-info {
                 width: 60%;
