@@ -100,18 +100,20 @@
             transform: scale(1.05);
         }
 
-        @media (min-width: 768px) {
-            .weapon {
-                flex-direction: row;
-                align-items: flex-start;
-                width: 100%;
-            }
+         @media (min-width: 768px) {
+    .weapon {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 90%; /* Réduit la largeur pour éviter l'étirement */
+        max-width: 800px; /* Limite la taille maximale */
+    }
+}
 
-            .weapon img {
-                width: 40%;
-                margin-right: 20px;
-                border-radius: 10px 0 0 10px;
-            }
+.weapon img {
+    width: 100%;
+    height: auto; /* Empêche l'image de s'étirer verticalement */
+    object-fit: cover; /* Assure un bon rendu de l'image */
+}
 
             .weapon-info {
                 width: 60%;
