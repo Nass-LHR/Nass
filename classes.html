@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <!-- Google tag (gtag.js) -->
@@ -100,7 +100,7 @@
             transform: scale(1.05);
         }
 
-       /* Ajout d'un style flexbox pour centrer correctement les armes */
+      /* Ajout d'un style flexbox pour centrer correctement les armes */
 .container {
     display: flex;
     justify-content: center;
@@ -111,36 +111,36 @@
 }
 
 .armes {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
     width: 100%;
     max-width: 1000px;
-    justify-content: center;
 }
 
 .armes img {
-    width: 100%;
+    width: 200px;
     height: auto;
     object-fit: cover;
     display: block;
     margin: 0 auto;
 }
 
-/* Ajustement pour s'assurer que les dernières armes restent bien centrées */
 @media (max-width: 768px) {
     .armes {
-        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
     .armes {
-        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-
+        
             .weapon-info {
                 width: 60%;
                 text-align: left;
